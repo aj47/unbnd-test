@@ -131,8 +131,8 @@ function init()
 	
 	videoImage = document.createElement( 'canvas' );
 	
-	// videoImage.width = 480;
-	// videoImage.height = 204;
+	videoImage.width = SCREEN_WIDTH;
+	videoImage.height = SCREEN_HEIGHT;
 
 	videoImageContext = videoImage.getContext( '2d' );
 	// background color if no video present
@@ -152,7 +152,7 @@ function init()
 	movieScreen.rotation.set(-20,0,0);
 	scene.add(movieScreen);
 	
-	camera.position.set(0,300,0);
+	camera.position.set(0,284,0);
 	camera.lookAt(new THREE.Vector3( 0, 100, 0 ));
 				
 	
