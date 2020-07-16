@@ -109,6 +109,7 @@ function init()
 	if(Hls.isSupported()) {
 		video = document.createElement( 'video' );
 		video.setAttribute('crossorigin', 'anonymous');
+		video.muted = true;
 		var hls = new Hls();
 		hls.loadSource('https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8');
 		// hls.loadSource('https://cdn-dave.missinginaction.com.au/mia/nba/stats-video/stream.m3u8');
@@ -156,6 +157,9 @@ function init()
 	camera.lookAt(new THREE.Vector3( 0, 100, 0 ));
 				
 	
+	video.addEventListener('dblclick', function (e) {
+		video.play();
+	});
 }
 
 function animate() 
